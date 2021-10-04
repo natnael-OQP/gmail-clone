@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core'
 export const SidebarContainer = styled.div`
     flex:.2;
     box-sizing: border-box;
-    border-right: 2px solid whitesmoke ;
+    border-right: 2px solid whitesmoke;
 `;
 export const Btn = styled(Button)`
     margin-top: 15px !important;
@@ -12,7 +12,7 @@ export const Btn = styled(Button)`
     margin-bottom: 15px !important;
     text-transform:capitalize !important;
     color: gray !important;
-    padding: 10px 15px !important;
+    padding: 10px 17px !important;
     border-radius: 20px !important;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
     transition: all 0.4s ease-in-out !important;
@@ -22,4 +22,11 @@ export const Btn = styled(Button)`
         background-color: #fff !important;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
     }
+`;
+
+export const SidebarFooter = styled.div`
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;

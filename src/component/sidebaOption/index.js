@@ -14,7 +14,7 @@ export const SidebarOptionWrapper = styled.div`
     ${Flexy}
     height: 30px;
     cursor: pointer;
-    padding: 0px 6px;
+    padding: 0px 10px;
     color: gray;
     &:hover{
         ${HoverColor};
@@ -33,7 +33,7 @@ export const SidebarOptionWrapper = styled.div`
 `;
 
 export const H4 = styled.h4`
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: capitalize;
     margin-left: 17px;

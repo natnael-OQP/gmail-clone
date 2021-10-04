@@ -1,19 +1,15 @@
 import React from 'react'
-import Header from '../component/header/Header';
-import Banner from './Banner';
 import styled from 'styled-components';
-export const Main = styled.div`
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+import Header from '../component/header/Header';
+import EmailBodyPage from './EmailBodypage';
 
-`;
-
-export const HomePage = () => {
+const HomePage = () => {
     return (
-        <Main>
+        <>
             <Header />
-            <Banner />
-        </Main>
+            <EmailBodyPage/>
+        </>
     )
 }
+
+export default HomePage;

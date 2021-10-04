@@ -1,22 +1,33 @@
-import React from 'react'
-import { Btn, SidebarContainer } from '.'
-import AddIcon from '@mui/icons-material/Add';
-import SidebarOption from '../sidebaOption/SidebarOption';
-import { Inbox } from '@mui/icons-material';
-import { Star } from '@material-ui/icons';
+import React from "react";
+import { Btn, SidebarContainer, SidebarFooter } from ".";
+import AddIcon from "@mui/icons-material/Add";
+import SidebarOption from "../sidebaOption/SidebarOption";
+import { AccessTime, Duo, ExpandMore, Inbox, Note, Person, Phone } from "@mui/icons-material";
+import { NearMe, Star } from "@material-ui/icons";
+import { IconButton } from "@material-ui/core";
 
 function Sidebar() {
-    return (
-        <SidebarContainer >
-            <Btn
-                startIcon={<AddIcon fontSize='large'/>}
-            >
-                compact
-            </Btn>
-            <SidebarOption Icon={Inbox} title="inbox" number={20} selected={true} />
-            <SidebarOption Icon={Star} title="starred" number={20} />
-        </SidebarContainer>
-    )
-}
+return (
+    <SidebarContainer>
+        <Btn startIcon={<AddIcon fontSize="large" />}>compact</Btn>
+        <SidebarOption Icon={Inbox} title="inbox" number={20} selected={true} />
+        <SidebarOption Icon={Star} title="starred" number={20} />
+        <SidebarOption Icon={AccessTime} title="snooze" number={20} />
+        <SidebarOption Icon={NearMe} title="sent" number={20} />
+        <SidebarOption Icon={Note} title="draft" number={20} />
+        <SidebarOption Icon={ExpandMore} title="more" number={20} />
+        <SidebarFooter>
+            <IconButton>
+                <Person fontSize="small"/>
+            </IconButton>
+            <IconButton>
+                <Duo fontSize="small"/>
+            </IconButton>
+            <IconButton>
+                <Phone fontSize="small"/>
+            </IconButton>
+        </SidebarFooter>
+    </SidebarContainer>
+)}
 
-export default Sidebar
+export default Sidebar;
