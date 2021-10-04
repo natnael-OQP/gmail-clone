@@ -12,6 +12,8 @@ import MailList from '../component/MailList/MailList';
 
 export const EmailBodyContainer = styled.div`
     display: flex;
+    width: 100%;
+    height: 100%;
 `;
 
 function EmailBodyPage() {
