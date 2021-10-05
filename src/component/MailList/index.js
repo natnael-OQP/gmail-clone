@@ -13,7 +13,8 @@ export const EmailListSetting = styled.div`
     top: 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    z-index:999;
 `;
 
 export const EmailListSettingLeft = styled.div`
@@ -35,7 +36,9 @@ export const EmailListSettingRight = styled.div`
 `;
 export const EmailListSection = styled.div`
     position: sticky;
-    top: 0;
     display: flex;
-    justify-content: space-between;
+    top: 0;
+    border-bottom: 1px solid whitesmoke;
+    background-color: #fff;
+    z-index:999;    
 `;

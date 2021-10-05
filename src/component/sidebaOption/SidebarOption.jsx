@@ -11,4 +11,4 @@ const SidebarOption = ({Icon,title,number,selected})=> {
     )
 }
 
-export default SidebarOption
+export default SidebarOption;
