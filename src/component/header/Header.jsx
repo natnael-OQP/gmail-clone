@@ -12,7 +12,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { Avatar, IconButton } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import { Apps, ArrowDropDown, Notifications } from "@material-ui/icons";
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router";
 // img
 let img = [
   "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png",
@@ -26,7 +26,7 @@ const Header = () => {
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <Image src={img[0]} alt="Gmail Logo" />
+        <Image onClick={()=>history.push('/') } src={img[0]} alt="Gmail Logo" />
       </HeaderLeft>
       <HeaderMiddle>
         <IconButton>
@@ -38,7 +38,7 @@ const Header = () => {
         </IconButton>
       </HeaderMiddle>
       <HeaderRight>
-        <IconButton onClick={() => history.push("/mail")}>
+        <IconButton>
           <Apps />
         </IconButton>
         <IconButton>
