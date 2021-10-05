@@ -5,6 +5,8 @@ export const EmailListContainer = styled.div`
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
+
 `;
 
 export const EmailListSetting = styled.div`
@@ -41,4 +43,7 @@ export const EmailListSection = styled.div`
     border-bottom: 1px solid whitesmoke;
     background-color: #fff;
     z-index:999;    
+`;
+export const EmailListWrapper = styled.div`
+    
 `;

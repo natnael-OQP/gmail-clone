@@ -8,6 +8,7 @@ export const Main = styled.div`
     width: 100%;
     height: 100vh;
     flex-direction: column;
+    overflow: hidden;
 `;
 
 const HomePage = () => {

@@ -1,53 +1,53 @@
-import React from 'react'
+import React from "react";
 import {
-    HeaderContainer,
-    HeaderLeft,
-    HeaderMiddle,
-    HeaderRight,
-    Image,
-    Input,
-
-} from '.';
+  HeaderContainer,
+  HeaderLeft,
+  HeaderMiddle,
+  HeaderRight,
+  Image,
+  Input,
+} from ".";
 // material-ui
-import MenuIcon from '@material-ui/icons/Menu';
-import { Avatar, IconButton } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
-import { Apps, ArrowDropDown, Notifications } from '@material-ui/icons';
+import MenuIcon from "@material-ui/icons/Menu";
+import { Avatar, IconButton } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
+import { Apps, ArrowDropDown, Notifications } from "@material-ui/icons";
+import { useHistory } from "react-router-dom";
 // img
 let img = [
-    'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png',
-]
-
+  "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png",
+];
 
 const Header = () => {
-    return (
-        <HeaderContainer>
-            <HeaderLeft>
-                <IconButton>
-                    <MenuIcon />
-                </IconButton>
-                <Image src={img[0]} alt="Gmail Logo" />
-            </HeaderLeft>
-            <HeaderMiddle>
-                <IconButton>
-                    <SearchIcon />
-                </IconButton>
-                <Input type="search" placeholder="search mail" />
-                <IconButton> 
-                    <ArrowDropDown />
-                </IconButton>
-            </HeaderMiddle>
-            <HeaderRight>
-                <IconButton>
-                    <Apps/>
-                </IconButton>
-                <IconButton>
-                    <Notifications/>
-                </IconButton>
-                <Avatar/>
-            </HeaderRight>
-        </HeaderContainer>
-    )
-}
+  const history = useHistory();
+  return (
+    <HeaderContainer>
+      <HeaderLeft>
+        <IconButton>
+          <MenuIcon />
+        </IconButton>
+        <Image src={img[0]} alt="Gmail Logo" />
+      </HeaderLeft>
+      <HeaderMiddle>
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+        <Input type="search" placeholder="search mail" />
+        <IconButton>
+          <ArrowDropDown />
+        </IconButton>
+      </HeaderMiddle>
+      <HeaderRight>
+        <IconButton onClick={() => history.push("/mail")}>
+          <Apps />
+        </IconButton>
+        <IconButton>
+          <Notifications />
+        </IconButton>
+        <Avatar />
+      </HeaderRight>
+    </HeaderContainer>
+  );
+};
 
 export default Header;

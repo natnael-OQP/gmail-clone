@@ -19,7 +19,7 @@ export const Image = styled.img`
     width:109px;
     height: 40px;
     object-fit:contain;
-    
+    cursor: pointer;
 `;
 
 export const HeaderMiddle = styled.div`
