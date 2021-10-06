@@ -69,10 +69,7 @@ function Mail() {
             <MailBody>
                 <MailBodyHeader>
                     <H3>jonas blue</H3>
-                    <LabelImportant css={`
-                         color: #e8ab02 !important;
-                        margin-right:.4rem;
-                    `} />
+                    <LabelImportant/>
                     <P>(natnaelEmaye@Gmail.com)</P>
                     <Time>10pm</Time>
                 </MailBodyHeader>

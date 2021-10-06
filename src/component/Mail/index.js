@@ -39,7 +39,8 @@ export const MailBodyHeader = styled.div`
     border-bottom: 1px solid whitesmoke;
     padding: 10px 20px;
     .MuiSvgIcon-root{
-       
+        color: #e8ab02 !important;
+        margin-right:.4rem;
     }
 `;
 
