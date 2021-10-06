@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Header from '../component/header/Header';
 import SendMessage from '../component/SendMessage/SendMessage.component';
 import EmailBodyPage from './EmailBodypage';
+import { useSelector } from 'react-redux';
+import { selectSendMessageIsOpen } from '../features/mailSlice';
 
 export const Main = styled.div`
     display: flex;
@@ -13,11 +15,14 @@ export const Main = styled.div`
 `;
 
 const HomePage = () => {
+    
+    const SendMessageIsOpen = useSelector(selectSendMessageIsOpen );
+
     return (
         <Main>
             <Header />
             <EmailBodyPage />
-            <SendMessage/>
+            {SendMessageIsOpen && <SendMessage/> }
         </Main>
     )
 }

@@ -5,11 +5,14 @@ import SidebarOption from "../sidebaOption/SidebarOption";
 import { AccessTime, Duo, ExpandMore, Inbox, Note, Person, Phone } from "@mui/icons-material";
 import { NearMe, Star } from "@material-ui/icons";
 import { IconButton } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { OpenSendMessage } from "../../features/mailSlice";
 
 function Sidebar() {
+    const dispatch = useDispatch();
 return (
     <SidebarContainer>
-        <Btn startIcon={<AddIcon fontSize="large" />}>compact</Btn>
+        <Btn startIcon={<AddIcon fontSize="large" />} onClick={() =>( dispatch(OpenSendMessage()))} >compact</Btn>
         <SidebarOption Icon={Inbox} title="inbox" number={20} selected={true} />
         <SidebarOption Icon={Star} title="starred" number={20} />
         <SidebarOption Icon={AccessTime} title="snooze" number={20} />

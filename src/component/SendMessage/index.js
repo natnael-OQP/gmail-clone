@@ -13,7 +13,7 @@ export const SendMessageContainer = styled.div`
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     .MuiSvgIcon-root{
-        color:gray;
+        color:whitesmoke;
     }
 `;
 
@@ -35,6 +35,7 @@ export const H3 = styled.h4`
     letter-spacing:.028rem;
     font-family: Arial, Helvetica, sans-serif;
     padding:0 10px ;
+    z-index: 9999;
 `;
 
 export const Form = styled.form`
@@ -69,6 +70,17 @@ export const SendMessageOption = styled.div`
         margin: 15px;
         color:#fff;
     }
+`;
+
+export const Error = styled.p`
+    color: #FF9494;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .03rem ;
+    text-align:center;
+    background-color: #fff;
+    padding: 3px;
+    
 `;
 
 
