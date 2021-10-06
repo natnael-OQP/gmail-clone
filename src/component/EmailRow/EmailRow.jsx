@@ -11,7 +11,7 @@ import {
     Time
 } from '.'
 
-const EmailRow = (({id,title,subject, discretion,time}) => {
+const EmailRow = (({id,title,subject, message,time}) => {
     const history = useHistory();
     return (
         <EmailRowWrapper onClick={()=>history.push('/mail')} >
@@ -29,7 +29,7 @@ const EmailRow = (({id,title,subject, discretion,time}) => {
             </EmailRowTitleH4>
             <EmailRowMessageH5>
                 {subject}{" "}
-                <EmailRowDescriptionSpan>- {discretion}</EmailRowDescriptionSpan>
+                <EmailRowDescriptionSpan>- {message}</EmailRowDescriptionSpan>
             </EmailRowMessageH5>
             <Time>{time}</Time>
         </EmailRowWrapper>

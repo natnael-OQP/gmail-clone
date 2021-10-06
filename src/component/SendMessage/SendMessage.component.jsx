@@ -24,7 +24,7 @@ const SendMessage = () => {
             to: data.to,
             subject: data.subject,
             message: data.message,
-            timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
         dispatch(CloseSendMessage())
     }

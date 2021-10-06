@@ -25,26 +25,28 @@ export const EmailRowOption = styled.div`
 
 export const EmailRowTitleH4 = styled.h4`
     flex: .2;
-    font-size:14px;
-    padding: 0 5px;
+    color:#202124;
+    font-family:"Roboto" sans-serif;
+    font-size:15px;
     font-weight:600;
+    padding-right: 10px;
     letter-spacing: .03rem;
-    text-transform: capitalize;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 `;
 
-export const EmailRowMessageH5 = styled.h5`
+export const EmailRowMessageH5 = styled.h3`
     flex: .7;
-    font-size:14px;
-    font-weight: 500;
-    font-size: 15px;
+    font-family:"Roboto" sans-serif;
+    font-weight: 600;
+    font-size: 14px;
     letter-spacing:.03rem;
     padding-right:50px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow: ellipsis;
+    text-transform: capitalize;
 `;
 
 export const EmailRowDescriptionSpan = styled.span`
@@ -54,11 +56,12 @@ export const EmailRowDescriptionSpan = styled.span`
 `;
 
 export const Time = styled.p`
-    flex: .1;
-    display: flex;
+        display: flex;
     justify-content: flex-end;
     padding-right:10px;
+    font-family:"Roboto" sans-serif;
     font-size:13px;
     font-weight:bold;
     letter-spacing:0.02rem;
+    text-transform:lowercase
 `;
