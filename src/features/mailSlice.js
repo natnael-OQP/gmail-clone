@@ -1,22 +1,25 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {  createSlice } from '@reduxjs/toolkit';
 
 
 
 export const mailSlice = createSlice({
   name: 'mail',
   initialState: {
-    mail: null,
+    SendMessageIsOpen: false,
   },
   reducers: {
-    setMail: (state,action) => {      
-      state.mail = action.payload;
+    OpenSendMessage: (state) => {      
+      state.SendMessageIsOpen = true;
+    },
+    CloseSendMessage: (state) => {
+      state.SendMessageIsOpen = false;
     },
   },
 });
 
-export const { increment, decrement } = mailSlice.actions;
+export const { OpenSendMessage, CloseSendMessage } = mailSlice.actions;
 
-export const selectCount = (state) => state.mail.mail;
+export const selectSendMessageIsOpen = (state) => state.mail.SendMessageIsOpen;
 
 
 
