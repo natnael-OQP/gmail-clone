@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Header from '../component/header/Header';
-import { SendMessageContainer } from '../component/SendMessage';
+import SendMessage from '../component/SendMessage/SendMessage.component';
 import EmailBodyPage from './EmailBodypage';
 
 export const Main = styled.div`
@@ -17,7 +17,7 @@ const HomePage = () => {
         <Main>
             <Header />
             <EmailBodyPage />
-            <SendMessageContainer/>
+            <SendMessage/>
         </Main>
     )
 }
