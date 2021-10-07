@@ -27,6 +27,7 @@ import {
 import EmailRow from '../EmailRow/EmailRow';
 import EmailSection from '../EmailSection/EmailSection';
 import db from '../../database/firebase'
+import FlipMove from 'react-flip-move';
 
 function MailList() {
     const [email, setEmail] = useState([]);
@@ -77,17 +78,19 @@ function MailList() {
                 <EmailSection Icon={LocalOffer} title="promotion" color="green" />
             </EmailListSection>
             <EmailListWrapper>
-                {
-                    email.map(({ id, data: { to, subject, message, timestamp }}) => (
-                        <EmailRow
-                            key={id} 
-                            id={id} 
-                            title={to} 
-                            subject={subject}
-                            message={message} 
-                            time={new Date(timestamp?.seconds*1000).toLocaleTimeString() } />
-                    ))
-                }
+                <FlipMove>
+                    {
+                        email.map(({ id, data: { to, subject, message, timestamp }}) => (
+                            <EmailRow
+                                key={id} 
+                                id={id} 
+                                title={to} 
+                                subject={subject}
+                                message={message} 
+                                time={new Date(timestamp?.seconds*1000).toLocaleTimeString() } />
+                        ))
+                    }
+                </FlipMove>
             </EmailListWrapper>
         </EmailListContainer>
     )
