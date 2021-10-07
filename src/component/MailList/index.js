@@ -6,6 +6,14 @@ export const EmailListContainer = styled.div`
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    /* firefox */
+    scrollbar-width: none;
+    /* IE and Edge */
+    -ms--ms-overflow-style:none;
+    /* hide scroll bar for chrome brave safari opera */
+    ::-webkit-scrollbar{
+        display:none;
+    }
 
 `;
 

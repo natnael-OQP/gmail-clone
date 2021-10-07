@@ -57,8 +57,11 @@ export const P = styled.p`
 `;
 
 export const Time = styled.p`
-    color: gray;
-    font-weight:400;
+    color: #1A1C2C;
+    font-weight:bold;
+    font-size:13px;
+    font-family:"Roboto" sans-serif;
+    text-transform: lowercase;
 `;
 
 export const MailMessage = styled.p`
