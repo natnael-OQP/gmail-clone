@@ -27,9 +27,13 @@ import {
     MailMessage,
 } from '.';
 
+import { useSelector } from 'react-redux';
+import { SelectMailSelected } from '../../features/mailSlice';
+
 function Mail() {
 
     const history = useHistory();
+    const SelectedMail = useSelector(SelectMailSelected);
 
     return (
         <MailContainer>
@@ -68,12 +72,12 @@ function Mail() {
             </MailHeader>
             <MailBody>
                 <MailBodyHeader>
-                    <H3>jonas blue</H3>
+                    <H3>{SelectedMail.subject}</H3>
                     <LabelImportant/>
-                    <P>(natnaelEmaye@Gmail.com)</P>
-                    <Time>10pm</Time>
+                    <P>( {SelectedMail.title} )</P>
+                    <Time>{SelectedMail.time}</Time>
                 </MailBodyHeader>
-                <MailMessage >jonas</MailMessage>
+                <MailMessage >{ SelectedMail.message }</MailMessage>
             </MailBody>
         </MailContainer>
     )

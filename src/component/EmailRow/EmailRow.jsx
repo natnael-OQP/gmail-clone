@@ -1,7 +1,7 @@
-import { Checkbox, IconButton } from '@material-ui/core'
-import { CheckBox, LabelImportantOutlined, StarBorderOutlined } from '@mui/icons-material'
 import React from 'react'
 import { useHistory } from 'react-router'
+import { Checkbox, IconButton } from '@material-ui/core'
+import { CheckBox, LabelImportantOutlined, StarBorderOutlined } from '@mui/icons-material'
 import {
     EmailRowWrapper,
     EmailRowOption, 
@@ -10,11 +10,24 @@ import {
     EmailRowDescriptionSpan, 
     Time
 } from '.'
+import { useDispatch } from 'react-redux'
+import { MailSelected } from '../../features/mailSlice'
 
 const EmailRow = (({id,title,subject, message,time}) => {
     const history = useHistory();
+    const dispatch = useDispatch();
+    const onSelected = () => {
+        dispatch(MailSelected({
+            id: id,
+            title: title,
+            subject: subject,
+            message: message,
+            time: time,
+        }))
+        history.push('/mail')
+    }
     return (
-        <EmailRowWrapper onClick={()=>history.push('/mail')} >
+        <EmailRowWrapper onClick={onSelected} >
             <EmailRowOption>
                 <Checkbox size="small" />
                 <IconButton size="small">
