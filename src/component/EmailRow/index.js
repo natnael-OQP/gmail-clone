@@ -11,7 +11,7 @@ export const EmailRowWrapper = styled.div`
     border-bottom: 1px solid whitesmoke;
     height: 40px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
     &:hover{
         border-bottom: 1px solid whitesmoke;
         transform: scale(1.005);
